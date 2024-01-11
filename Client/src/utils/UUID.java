@@ -181,38 +181,14 @@ public final class UUID implements java.io.Serializable, Comparable<UUID>
         return mostSigBits;
     }
 
-    /**
-     * 与此 {@code UUID} 相关联的版本号. 版本号描述此 {@code UUID} 是如何生成的。
-     * <p>
-     * 版本号具有以下含意:
-     * <ul>
-     * <li>1 基于时间的 UUID
-     * <li>2 DCE 安全 UUID
-     * <li>3 基于名称的 UUID
-     * <li>4 随机生成的 UUID
-     * </ul>
-     *
-     * @return 此 {@code UUID} 的版本号
-     */
+
     public int version()
     {
         // Version is bits masked by 0x000000000000F000 in MS long
         return (int) ((mostSigBits >> 12) & 0x0f);
     }
 
-    /**
-     * 与此 {@code UUID} 相关联的变体号。变体号描述 {@code UUID} 的布局。
-     * <p>
-     * 变体号具有以下含意：
-     * <ul>
-     * <li>0 为 NCS 向后兼容保留
-     * <li>2 <a href="IETF&nbsp;RFC&nbsp;4122(Leach-Salz'" DESIGNTIMESP=969>IETF&nbsp;RFC&nbsp;4122(Leach-Salz'" DESIGNTIMESP=518>http://www.ietf.org/rfc/rfc4122.txt">IETF&nbsp;RFC&nbsp;4122</a>(Leach-Salz), 用于此类
-     * <li>6 保留，微软向后兼容
-     * <li>7 保留供以后定义使用
-     * </ul>
-     *
-     * @return 此 {@code UUID} 相关联的变体号
-     */
+
     public int variant()
     {
         // This field is composed of a varying number of bits.
@@ -278,59 +254,13 @@ public final class UUID implements java.io.Serializable, Comparable<UUID>
         checkTimeBase();
         return leastSigBits & 0x0000FFFFFFFFFFFFL;
     }
-    /**
-     * 返回此{@code UUID} 的字符串表现形式。
-     *
-     * <p>
-     * UUID 的字符串表示形式由此 BNF 描述：
-     *
-     * <pre>
-     * {@code
-     * UUID                   = <time_low>-<time_mid>-<time_high_and_version>-<variant_and_sequence>-<node>
-     * time_low               = 4*<hexOctet>
-     * time_mid               = 2*<hexOctet>
-     * time_high_and_version  = 2*<hexOctet>
-     * variant_and_sequence   = 2*<hexOctet>
-     * node                   = 6*<hexOctet>
-     * hexOctet               = <hexDigit><hexDigit>
-     * hexDigit               = [0-9a-fA-F]
-     * }
-     * </pre>
-     *
-     * </blockquote>
-     *
-     * @return 此{@code UUID} 的字符串表现形式
-     * @see #toString(boolean)
-     */
+
     @Override
     public String toString()
     {
         return toString(false);
     }
-    /**
-     * 返回此{@code UUID} 的字符串表现形式。
-     *
-     * <p>
-     * UUID 的字符串表示形式由此 BNF 描述：
-     *
-     * <pre>
-     * {@code
-     * UUID                   = <time_low>-<time_mid>-<time_high_and_version>-<variant_and_sequence>-<node>
-     * time_low               = 4*<hexOctet>
-     * time_mid               = 2*<hexOctet>
-     * time_high_and_version  = 2*<hexOctet>
-     * variant_and_sequence   = 2*<hexOctet>
-     * node                   = 6*<hexOctet>
-     * hexOctet               = <hexDigit><hexDigit>
-     * hexDigit               = [0-9a-fA-F]
-     * }
-     * </pre>
-     *
-     * </blockquote>
-     *
-     * @param isSimple 是否简单模式，简单模式为不带'-'的UUID字符串
-     * @return 此{@code UUID} 的字符串表现形式
-     */
+
     public String toString(boolean isSimple)
     {
         final StringBuilder builder = new StringBuilder(isSimple ? 32 : 36);

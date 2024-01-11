@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class GroupCommon implements Serializable {
     private static final long serialVersionUID=1L;
-    private String groupAccount;//åªèƒ½æœ‰ä¸€ä¸ªç¾¤ä¸»ä¸€ä¸ªç®¡ç†å‘˜ï¼›
+    private String groupAccount;//Ö»ÄÜÓĞÒ»¸öÈºÖ÷Ò»¸ö¹ÜÀíÔ±£»
     private String groupName;
     private String signature;
     private String ownerAccount;

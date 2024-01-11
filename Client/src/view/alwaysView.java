@@ -11,16 +11,16 @@ import java.io.IOException;
 
 public class alwaysView {
     public static Stage alwaysStage;
-    private static alwaysController controller; // æ·»åŠ ä¸€ä¸ªæ§åˆ¶å™¨å¯¹è±¡çš„å¼•ç”¨
+    private static alwaysController controller; // Ìí¼ÓÒ»¸ö¿ØÖÆÆ÷¶ÔÏóµÄÒıÓÃ
 
     public static void start(Stage primaryStage) throws IOException {
         alwaysStage = primaryStage;
         FXMLLoader loader = new FXMLLoader(alwaysView.class.getClassLoader().getResource("fxml/always.fxml"));
         Parent root = loader.load();
 
-        controller = loader.getController(); // è·å–FXMLæ–‡ä»¶å…³è”çš„æ§åˆ¶å™¨å¯¹è±¡
+        controller = loader.getController(); // »ñÈ¡FXMLÎÄ¼ş¹ØÁªµÄ¿ØÖÆÆ÷¶ÔÏó
 
-        primaryStage.setTitle("å°èŠ±èŠ±èŠå¤©å®¤");
+        primaryStage.setTitle("Ğ¡»¨»¨ÁÄÌìÊÒ");
         primaryStage.setScene(new Scene(root, 200, 300));
         primaryStage.show();
     }

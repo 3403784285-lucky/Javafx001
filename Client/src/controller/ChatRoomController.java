@@ -46,93 +46,247 @@ import java.util.ResourceBundle;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+/**
+ * 聊天室控制器，负责管理聊天室界面的各种交互操作和事件响应。
+ *
+ * @author 张培灵
+
+ */
 public class ChatRoomController implements Initializable {
+
+    /**
+     *用户头像
+     */
     @FXML
     private ImageView userImage;
+    /**
+     * 好友列表
+     */
     @FXML
     private ListView<Friend> friendList;
+    /**
+     * 联系人列表容器
+     */
     @FXML
     private VBox contactpane;
+    /**
+     *消息面板容器
+     */
     @FXML
     private VBox messagePane;
+    /**
+     *申请好友列表
+     */
     @FXML
     private ListView<Friend> applicationaa;
+    /**
+     * 联系人列表
+     */
     @FXML
     private ListView<Friend> friendListView;
+    /**
+     *搜索好友文本框
+     */
     @FXML
     private TextField searchFriend;
+    /**
+     *发送照片按钮
+     */
     @FXML
     private Button photoSend;
+    /**
+     发送文件按钮
+     */
     @FXML
     private Button docuSend;
+    /**
+     *消息输入框
+     */
     @FXML
     private TextArea messagess;
+    /**
+     *消息滚动面板
+     */
     @FXML
     private ScrollPane scrollPane;
+    /**
+     *查看群组资料菜单项
+     */
     @FXML
     private MenuItem profileIdGroup;
+    /**
+     *查看好友资料菜单项
+     */
     @FXML
     private MenuItem profileId;
+    /**
+     *发送消息按钮
+     */
     @FXML
     private Button message;
+    /**
+     *菜单项1
+     */
     @FXML
     private MenuItem mi1;
 
+    /**
+     *菜单项3
+     */
     @FXML
     private MenuItem mi3;
 
+    /**
+     *联系人按钮
+     */
     @FXML
     private Button contact;
 
+    /**
+     *菜单项2
+     */
     @FXML
     private MenuItem mi2;
 
+    /**
+     *菜单项4
+     */
     @FXML
     private MenuItem mi4;
+    /**
+     *表情滚动面板
+     */
     @FXML
     private ScrollPane emojiscroll;
+    /**
+     *群组列表
+     */
     @FXML
     private ListView<Friend> groupListView;
+    /**
+     *修改密码菜单项
+     */
     @FXML
     private MenuItem changePassword;
+    /**
+     *表情流式面板
+     */
     @FXML
     private FlowPane emojiflow;
+    /**
+     *流式面板1
+     */
     @FXML
     private FlowPane flowPane1;
+    /**
+     *图片
+     */
     @FXML
     private ImageView haha;
+    /**
+     *发送按钮
+     */
     @FXML
     private Button sendButton;
+    /**
+     * 隐藏面板
+     */
     @FXML
     private AnchorPane hidePane;
+    /**
+     * 是否是自己
+     */
     private boolean isMine;
+    /**
+     *账号列表
+     */
     private  ArrayList<String>accountt=new ArrayList<>();
+    /**
+     *群组账号列表
+     */
     private  ArrayList<String>accountg=new ArrayList<>();
-    private boolean last=true;public static Friend getMy;
+    /**
+     *是否是最后一条消息
+     */
+    private boolean last=true;
+    /**
+     *当前用户
+     */
+    public static Friend getMy;
+    /**
+     *临时消息列表
+     */
     private  ArrayList<Message>tempMessage=new ArrayList<>();
+    /**
+     *群组临时消息列表
+     */
     private ArrayList<Message>tempMessageGroup=new ArrayList<>();
+    /**
+     *图片A
+     */
     private ConcurrentHashMap <String,String>imageA;
+    /**
+     *图片B
+     */
     private ConcurrentHashMap <String,String>imageB;
+    /**
+     *好友列表的可观察列表
+     */
     private ObservableList<Friend> observableList ;
+    /**
+     *联系人列表的可观察列表
+     */
     private ObservableList<Friend> observableList1;
+    /**
+     *群组列表的可观察列表群组列表的可观察列表
+     */
     ObservableList<Friend> observableList2;
+    /**
+     *申请好友列表的可观察列表
+     */
     ObservableList<Friend> observableList3;
 
+    /**
+     * 获取账户列表。
+     *
+     * @return 账户列表
+     */
     public ArrayList<String> getAccountt() {
         return accountt;
     }
 
+    /**
+     * 获取群组账户列表。
+     *
+     * @return 群组账户列表
+     */
     public ArrayList<String> getAccountg() {
         return accountg;
     }
 
+    /**
+     * 获取用户头像映射。
+     *
+     * @return 用户头像映射
+     */
     public ConcurrentHashMap<String, String> getImageA() {
         return imageA;
     }
 
+    /**
+     * 获取群聊头像
+     */
     public ConcurrentHashMap<String, String> getImageB() {
         return imageB;
     }
+
+    /**
+     * 处理查看聊天历史记录的操作。
+     *
+     * @param event 查看聊天历史记录按钮点击事件
+     */
+
     @FXML
     void chatHistory(ActionEvent event) {
         try {
@@ -143,6 +297,11 @@ public class ChatRoomController implements Initializable {
     }
 
 
+    /**
+     * 添加好友到好友列表的可观察列表中。
+     *
+     * @param f 要添加的好友
+     */
     public void addObservableList(Friend f)
    {
 
@@ -151,6 +310,12 @@ public class ChatRoomController implements Initializable {
 
 
    }
+
+    /**
+     * 添加好友到联系人列表的可观察列表中。
+     *
+     * @param f 要添加的好友
+     */
     public void addObservableList1(Friend f)
     {
 
@@ -159,14 +324,26 @@ public class ChatRoomController implements Initializable {
 
 
     }
-   public void addObservableList3(Friend g)
+
+    /**
+     * 添加群组到申请好友列表的可观察列表中。
+     *
+     * @param g 要添加的群组
+     */
+    public void addObservableList3(Friend g)
    {
 
            observableList3.add(g);
            groupListView.setItems(observableList3);
 
    }
-   public void removeObservableList3(Friend g)
+
+    /**
+     * 从申请好友列表的可观察列表中移除群组。
+     *
+     * @param g 要移除的群组
+     */
+    public void removeObservableList3(Friend g)
    {
 
            Iterator<Friend> iterator = observableList3.iterator();
@@ -179,6 +356,13 @@ public class ChatRoomController implements Initializable {
            groupListView.setItems(observableList3);
 
    }
+
+    /**
+     * 从好友列表的可观察列表中移除好友。
+     *
+     * @param friend 要移除的好友账号
+     */
+
     public void removeObservableList(String friend)
     {
 
@@ -193,6 +377,8 @@ public class ChatRoomController implements Initializable {
 
 
     }
+
+
     public void addObservableList2(Friend f)
     {
 
@@ -200,6 +386,12 @@ public class ChatRoomController implements Initializable {
             applicationaa.setItems(observableList2);
 
     }
+
+    /**
+     *
+     * @param msg
+     * 处理接受的文件信息
+     */
     public void fileReceive(Message msg)
     {
         System.out.println("看看这边走到哪里了");
@@ -313,6 +505,11 @@ public class ChatRoomController implements Initializable {
 
 
     }
+
+    /**
+     * @param msg
+     * 接受图片的新消息处理
+     */
     public void receiveFavor(Message msg) {
         // 创建一个 Task 对象
         Task<Void> task = new Task<Void>() {
@@ -392,6 +589,11 @@ public class ChatRoomController implements Initializable {
         thread.setDaemon(true);
         thread.start();
     }
+
+    /**
+     * 处理接受的群文件信息
+     * @param msg
+     */
     public  void receiveFavorGroup(Message msg)
     {
 
@@ -474,6 +676,10 @@ public class ChatRoomController implements Initializable {
         thread.setDaemon(true);
         thread.start();
     }
+
+    /**
+     *错误处理函数，报错并退出
+     */
     public void errorDeal()
     {
             Alert alert=new Alert(Alert.AlertType.ERROR);
@@ -485,6 +691,10 @@ public class ChatRoomController implements Initializable {
         leaveAction();
 
     }
+
+    /**
+     *退出函数并将发送消息接受到数据库
+     */
     public void leaveAction() {
         Task<Void> task = new Task<Void>() {
             @Override
@@ -505,10 +715,19 @@ public class ChatRoomController implements Initializable {
         Thread thread = new Thread(task);
         thread.start();
     }
+
+    /**
+     * @return {@link ImageView}
+     * 获取用户头像
+     */
     public ImageView getUserImage() {
         return userImage;
     }
 
+    /**
+     * 选择图片
+     * @param id
+     */
     private void selectEmoji(String id)
     {
 
@@ -516,6 +735,11 @@ public class ChatRoomController implements Initializable {
             messagess.positionCaret(messagess.getText().length());
 
     }
+
+    /**
+     * 处理群文件消息，包括点击和下载
+     * @param msg
+     */
     public void fileReceiveGroup(Message msg)
     {
         Pattern pp=Pattern.compile("\\d{10}");
@@ -626,6 +850,9 @@ public class ChatRoomController implements Initializable {
 
     }
 
+    /**
+     * 将表情包加入输入框
+     */
     private void addEmoji()
     {
         Platform.runLater(()->
@@ -655,6 +882,12 @@ public class ChatRoomController implements Initializable {
         });
 
     }
+
+    /**
+     * @param msg
+     * @return boolean
+     * 判断好友或群聊格式
+     */
     public boolean referField(Message msg)
     {
         boolean mark=false;
@@ -676,6 +909,11 @@ public class ChatRoomController implements Initializable {
 
         return mark;
     }
+
+    /**
+     * @param message1
+     * 将消息加入盒子
+     */
     public void addBox(Message message1)
     {
         if(referField(message1))
@@ -763,42 +1001,77 @@ public class ChatRoomController implements Initializable {
 
 }
 
+    /**
+     * @param userImage
+     * 设置用户头像
+     */
     public void setUserImage(ImageView userImage) {
         this.userImage = userImage;
     }
 
+    /**
+     * @return {@link MenuItem}
+     * 获取常用语
+     */
     public MenuItem getMi1() {
         return mi1;
     }
 
+    /**
+     * @param text
+     * 选择产常用语言     */
     public void setMi1(String text) {
         this.mi1.setText(text);
     }
 
+    /**
+     * @return {@link MenuItem}
+     */
     public MenuItem getMi3() {
         return mi3;
     }
 
+    /**
+     * @param text
+     */
     public void setMi3(String text) {
         this.mi3.setText(text);
     }
 
+    /**
+     * @return {@link MenuItem}
+     */
     public MenuItem getMi2() {
         return mi2;
     }
 
+    /**
+     * @param text
+     */
     public void setMi2(String text) {
         this.mi2.setText(text);
     }
 
+    /**
+     * @return {@link MenuItem}
+     * 设置常用语言
+     */
     public MenuItem getMi4() {
         return mi4;
     }
 
+    /**
+     * @param text
+     * 点击常用语
+     */
     public void setMi4(String text) {
         this.mi4.setText(text);
     }
-    //自己的头像，头像大小40*40；
+
+    /**
+     * @param message1
+     * 自己的头像，头像大小40*40；
+     */
     public void addBoxGroup(Message message1) {
         // Run JavaFX UI update on the JavaFX application thread
 
@@ -886,6 +1159,11 @@ public class ChatRoomController implements Initializable {
         }
 
     }
+
+    /**
+     * @param account
+     * 在线刷新好友状态
+     */
     public void refreshFriendListOnline(String account)
     {
 
@@ -903,6 +1181,11 @@ public class ChatRoomController implements Initializable {
 
         System.out.println("已将成员设置为不在线并重新添加到列表中");
     }
+
+    /**
+     * @param account
+     * 登陆刷新好友状态
+     */
     public void refreshFriendListLogin(String account)
     {
 
@@ -921,6 +1204,11 @@ public class ChatRoomController implements Initializable {
 
 
     }
+
+    /**
+     * @param account
+     * 刷新好友登录列表
+     */
     public void refreshFriendListViewOnline(String account)
     {
 
@@ -937,6 +1225,10 @@ public class ChatRoomController implements Initializable {
 
 
     }
+
+    /**
+     *发送消息
+     */
     private void sendMessageUtil()
     {
         Task<Void> task = new Task<Void>() {
@@ -1014,6 +1306,11 @@ public class ChatRoomController implements Initializable {
         thread.setDaemon(true); // 设置为守护线程，随着应用关闭而关闭
         thread.start();
     }
+
+    /**
+     * @param listView
+     * 加载好友列表
+     */
     public void friendForm(ListView<Friend>listView)
     {
         Platform.runLater(()->
@@ -1079,6 +1376,11 @@ public class ChatRoomController implements Initializable {
         thread3.start();
 
     }
+
+    /**
+     * @param listView
+     * 加载群聊列表
+     */
     public void groupForm(ListView<Friend> listView)
     {
         Task<ArrayList<Message>> getFriendsTask = new Task<ArrayList<Message>>() {
@@ -1132,11 +1434,21 @@ public class ChatRoomController implements Initializable {
         thread1.start();
         // 启动加载聊天记录数据的任务
     }
+
+    /**
+     * @param event
+     * 发送蛋妞
+     */
     @FXML
     void sendButtonAction(ActionEvent event) {
        sendMessageUtil();
 
     }
+
+    /**
+     * @param event
+     * 改变密码按钮点击事件
+     */
     @FXML
     void changePasswordAction(ActionEvent event) {
         LoginController.variable=true;
@@ -1150,6 +1462,11 @@ public class ChatRoomController implements Initializable {
 
 
     }
+
+    /**
+     * @param event
+     * 资料信息，包括好友或者群聊
+     */
     @FXML
     void profileAction(ActionEvent event) {
          ChatRoomView.chatRoomStage.close();
@@ -1160,6 +1477,11 @@ public class ChatRoomController implements Initializable {
            }
 
     }
+
+    /**
+     * @param event
+     * 消息列表
+     */
     @FXML
     void messageAction(ActionEvent event) {
         messagePane.setVisible(true);
@@ -1168,16 +1490,32 @@ public class ChatRoomController implements Initializable {
         contactpane.setDisable(true);
         contactpane.setVisible(false);
     }
+
+    /**
+     * @param event
+     * 登出函数
+     */
     @FXML
     void logoutAction(ActionEvent event) {
         leaveAction();
     }
+
+    /**
+     * @param event
+     * 发送信息
+     *
+     */
     @FXML
     void messageSend(KeyEvent event) {
             if (event.getCode() == KeyCode.ENTER) {
                sendMessageUtil();
             }
     }
+
+    /**
+     * @param event
+     * 联系人面板点击
+     */
     @FXML
     void contactAction(ActionEvent event) {
         messagePane.setVisible(false);
@@ -1186,6 +1524,12 @@ public class ChatRoomController implements Initializable {
         contactpane.setDisable(false);
         contactpane.setVisible(true);
     }
+
+    /**
+     * @param location
+     * @param resources
+     * 初始化界面，包括加载好友和群聊列表，并且加载聊天记录
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         emojiflow.setVisible(false);
@@ -1495,6 +1839,11 @@ public class ChatRoomController implements Initializable {
         });
         scrollPane.setVvalue(1);
     }
+
+    /**
+     * @param event
+     * 点击头像打开资料修改界面
+     */
     @FXML
     void imageClicked(MouseEvent event) {
         try {
@@ -1505,6 +1854,11 @@ public class ChatRoomController implements Initializable {
         }
 
     }
+
+    /**
+     * @param event
+     * 选择头像
+     */
     @FXML
     void imageChoose(ActionEvent event) {
 
@@ -1565,6 +1919,11 @@ public class ChatRoomController implements Initializable {
         // Execute the task on the JavaFX application thread
         Platform.runLater(fileChooserTask);
     }
+
+    /**
+     * @param event
+     * 搜索好友或群聊，采用模糊搜索
+     */
     @FXML
     void clickedF(ActionEvent event) {
 
@@ -1592,6 +1951,11 @@ public class ChatRoomController implements Initializable {
             }
 
     }
+
+    /**
+     * @param event
+     * 表情显示
+     */
     @FXML
     void expression(ActionEvent event) {
         addEmoji();
@@ -1601,6 +1965,11 @@ public class ChatRoomController implements Initializable {
         emojiscroll.setVisible(true);
 
     }
+
+    /**
+     * @param event
+     * 发送文件，将文件显示并且分片上传
+     */
     @FXML
     void fileSend(ActionEvent event) {
                 FileChooser fileChooser = new FileChooser();
@@ -1677,26 +2046,51 @@ public class ChatRoomController implements Initializable {
 
 
     }
+
+    /**
+     * @param event
+     * 添加常用语
+     */
     @FXML
     void menuItem1(ActionEvent event) {
        messagess.appendText(mi1.getText());
         messagess.positionCaret(messagess.getText().length()); // 将光标位置设置为末尾
     }
+
+    /**
+     * @param event
+     * 添加常用语
+     */
     @FXML
     void menuItem2(ActionEvent event) {
         messagess.appendText(mi1.getText());
         messagess.positionCaret(messagess.getText().length()); // 将光标位置设置为末尾
     }
+
+    /**
+     * @param event
+     * 添加常用语
+     */
     @FXML
     void menuItem3(ActionEvent event) {
         messagess.appendText(mi1.getText());
         messagess.positionCaret(messagess.getText().length()); // 将光标位置设置为末尾
     }
+
+    /**
+     * @param event
+     * 将常用于添加至输入框
+     */
     @FXML
     void menuItem4(ActionEvent event) {
         messagess.appendText(mi1.getText());
         messagess.positionCaret(messagess.getText().length()); // 将光标位置设置为末尾
     }
+
+    /**
+     * @param event
+     * 修改常用语界面
+     */
     @FXML
     void changeAlways(ActionEvent event) {
         try {
@@ -1707,6 +2101,11 @@ public class ChatRoomController implements Initializable {
 
 
     }
+
+    /**
+     * @param event
+     * 创建群聊
+     */
     @FXML
     void creatGroup(ActionEvent event) {
 
@@ -1726,6 +2125,11 @@ public class ChatRoomController implements Initializable {
     });
 
     }
+
+    /**
+     * @param event
+     * 加载群资料
+     */
     @FXML
     void profileActionGroup(ActionEvent event) {
         try {

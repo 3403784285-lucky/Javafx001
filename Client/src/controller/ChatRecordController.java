@@ -40,7 +40,7 @@ import static controller.ChatRoomController.getMy;
 
 /**
  * @author 张培灵
- * @date 2024/01/09
+ *
  * 聊天记录控制器
  */
 public class ChatRecordController implements Initializable {

@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 /**
- * 琛ㄧず鏈嶅姟鍣ㄥ拰瀹㈡埛绔�氫俊鏃剁殑娑堟伅瀵硅薄
+ * 表示服务器和客户端通信时的消息对象
  */
 public class Message1 extends Message implements Serializable {
     public Message1() {

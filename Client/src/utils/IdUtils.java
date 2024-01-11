@@ -1,13 +1,13 @@
 package utils;
 /**
- * ID生成器工具类
+ * ID������������
  */
 public class IdUtils
 {
     /**
-     * 获取随机UUID
+     * ��ȡ���UUID
      *
-     * @return 随机UUID
+     * @return ���UUID
      */
     public static String randomUUID()
     {
@@ -15,9 +15,9 @@ public class IdUtils
     }
 
     /**
-     * 简化的UUID，去掉了横线
+     * �򻯵�UUID��ȥ���˺���
      *
-     * @return 简化的UUID，去掉了横线
+     * @return �򻯵�UUID��ȥ���˺���
      */
     public static String simpleUUID()
     {
@@ -25,9 +25,9 @@ public class IdUtils
     }
 
     /**
-     * 获取随机UUID，使用性能更好的ThreadLocalRandom生成UUID
+     * ��ȡ���UUID��ʹ�����ܸ��õ�ThreadLocalRandom����UUID
      *
-     * @return 随机UUID
+     * @return ���UUID
      */
     public static String fastUUID()
     {
@@ -35,9 +35,9 @@ public class IdUtils
     }
 
     /**
-     * 简化的UUID，去掉了横线，使用性能更好的ThreadLocalRandom生成UUID
+     * �򻯵�UUID��ȥ���˺��ߣ�ʹ�����ܸ��õ�ThreadLocalRandom����UUID
      *
-     * @return 简化的UUID，去掉了横线
+     * @return �򻯵�UUID��ȥ���˺���
      */
     public static String fastSimpleUUID()
     {

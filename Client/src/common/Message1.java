@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 /**
- * 琛ㄧず鏈嶅姟鍣ㄥ拰瀹㈡埛绔�氫俊鏃剁殑娑堟伅瀵硅薄锛屼絾鏄敱浜庝袱涓浉鍚岀被鍨嬬殑瀵硅薄鍐茬獊璇嗗埆涓嶄簡锛岃繖閲屽垎涓ょ浼犺緭
+ * 表示服务器和客户端通信时的消息对象，但是由于两个相同类型的对象冲突识别不了，这里分两种传输
  */
 public class Message1 extends Message implements Serializable {
     public Message1() {

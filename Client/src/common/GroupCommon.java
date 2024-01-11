@@ -3,37 +3,37 @@ package common;
 import java.io.Serializable;
 
 /**
- * @author å¼ åŸ¹çµ
- * @date 2024/01/09
- * ç¾¤èŠç±»å‹
+ * @author ÕÅÅàÁé
+ *
+ * ÈºÁÄÀàĞÍ
  */
 public class GroupCommon implements Serializable {
     /**
-     *ç‰ˆæœ¬å·ï¼Œç”¨äºåºåˆ—åŒ–
+     *°æ±¾ºÅ£¬ÓÃÓÚĞòÁĞ»¯
      */
     private static final long serialVersionUID=1L;
     /**
-     *ç¾¤èŠè´¦å·
+     *ÈºÁÄÕËºÅ
      */
-    private String groupAccount;//åªèƒ½æœ‰ä¸€ä¸ªç¾¤ä¸»ä¸€ä¸ªç®¡ç†å‘˜ï¼›
+    private String groupAccount;//Ö»ÄÜÓĞÒ»¸öÈºÖ÷Ò»¸ö¹ÜÀíÔ±£»
     /**
-     *ç¾¤èŠåç§°
+     *ÈºÁÄÃû³Æ
      */
     private String groupName;
     /**
-     *ç¾¤èŠç®€ä»‹
+     *ÈºÁÄ¼ò½é
      */
     private String signature;
     /**
-     *ç¾¤ä¸»è´¦å·
+     *ÈºÖ÷ÕËºÅ
      */
     private String ownerAccount;
     /**
-     *ç®¡ç†å‘˜è´¦å·
+     *¹ÜÀíÔ±ÕËºÅ
      */
     private String managerAccount;
     /**
-     *ç¾¤èŠå›¾ç‰‡
+     *ÈºÁÄÍ¼Æ¬
      */
     private String imageGroup;
 

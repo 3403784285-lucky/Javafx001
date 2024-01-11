@@ -4,18 +4,19 @@ import java.io.Serializable;
 import java.sql.Date;
 
 /**
- * è¡¨ç¤ºä¸€ä¸ªç”¨æˆ·ä¿¡æ¯
+ * ±íÊ¾Ò»¸öÓÃ»§ĞÅÏ¢µÄÊµÌåÀà¡£
+ * °üº¬ÓÃ»§µÄ»ù±¾ĞÅÏ¢ÈçÓÃ»§ID¡¢ÃÜÂë¡¢ÓÊÏä¡¢ĞÔ±ğµÈ¡£
  */
 public class User implements Serializable {
-    //å¢å¼ºå…¼å®¹æ€§
+    //ÔöÇ¿¼æÈİĞÔ
     private static final long serialVersionUID=1L;
-    //ç”¨æˆ·ID
+    //ÓÃ»§ID
     private String userAccount;
 
     private boolean Online;
-    //å¯†ç 
+    //ÃÜÂë
     private String password;
-    //é‚®ç®±
+    //ÓÊÏä
     private String userEmail;
 
     private  String userImage;

@@ -4,41 +4,41 @@ import java.io.Serializable;
 
 
 /**
- * @author å¼ åŸ¹çµ
- * @date 2024/01/09
- * ç”¨äºå¥½å‹åŠå…¶ä¿¡æ¯
+ * @author ÕÅÅàÁé
+ *
+ * ÓÃÓÚºÃÓÑ¼°ÆäĞÅÏ¢
  */
 public class Friend implements Serializable {
 
     /**
-     *ç‰ˆæœ¬å·ï¼Œç”¨äºåºåˆ—åŒ–
+     *°æ±¾ºÅ£¬ÓÃÓÚĞòÁĞ»¯
      */
     private static final long serialVersionUID = 1L;
     /**
-     *å¥½å‹çš„è´¦å·
+     *ºÃÓÑµÄÕËºÅ
      */
     private String account;
     /**
-     *å¥½å‹å¤´åƒ
+     *ºÃÓÑÍ·Ïñ
      */
     private String avatar;
     /**
-     *å¥½å‹æ˜µç§°
+     *ºÃÓÑêÇ³Æ
      */
     private String nickname;
     /**
-     *å’Œå¥½å‹çš„å…³ç³»
+     *ºÍºÃÓÑµÄ¹ØÏµ
      */
     private String status;
     /**
-     *å¦‚æœæ˜¯ç¾¤çš„è¯ï¼Œé‚£ä¹ˆä¸ºç¾¤çš„è´¦å·
+     *Èç¹ûÊÇÈºµÄ»°£¬ÄÇÃ´ÎªÈºµÄÕËºÅ
      */
     private String groupAccount;
     /**
-     *å¥½å‹æ˜¯å¦åœ¨çº¿
+     *ºÃÓÑÊÇ·ñÔÚÏß
      */
     private boolean Online;
-    // æ„é€ å‡½æ•°ã€getterå’Œsetteræ–¹æ³•
+    // ¹¹Ôìº¯Êı¡¢getterºÍsetter·½·¨
 
 
     public boolean isOnline() {

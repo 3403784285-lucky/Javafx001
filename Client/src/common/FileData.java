@@ -3,25 +3,25 @@ package common;
 import java.io.Serializable;
 
 /**
- * @author å¼ åŸ¹çµ
- * @date 2024/01/09
- * ç”¨äºæ–‡ä»¶çš„ä¼ è¾“ç±»å‹
+ * @author ÕÅÅàÁé
+ *
+ * ÓÃÓÚÎÄ¼şµÄ´«ÊäÀàĞÍ
  */
 public class FileData implements Serializable {
 
     /**
-     *æ–‡ä»¶idï¼Œé»˜è®¤ç”Ÿæˆ
+     *ÎÄ¼şid£¬Ä¬ÈÏÉú³É
      */
     private int number;
     /**
-     *æ–‡ä»¶å†…å®¹ï¼Œç”¨å­—èŠ‚ä¼ è¾“
+     *ÎÄ¼şÄÚÈİ£¬ÓÃ×Ö½Ú´«Êä
      */
     private byte[] data;
 
     /**
      * @param number
      * @param data
-     * åˆå§‹åŒ–æ–¹æ³•
+     * ³õÊ¼»¯·½·¨
      */
     public FileData(int number, byte[] data) {
         this.number = number;
@@ -30,7 +30,7 @@ public class FileData implements Serializable {
 
     /**
      * @return int
-     * è·å–id
+     * »ñÈ¡id
      */
     public int getNumber() {
         return number;
@@ -38,7 +38,7 @@ public class FileData implements Serializable {
 
     /**
      * @return {@link byte[]}
-     * è·å–æ–‡ä»¶å†…å®¹
+     * »ñÈ¡ÎÄ¼şÄÚÈİ
      */
     public byte[] getData() {
         return data;

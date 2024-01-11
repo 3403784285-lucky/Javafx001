@@ -4,17 +4,17 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 /**
- * è¡¨ç¤ºæœåŠ¡å™¨å’Œå®¢æˆ·ç«¯é€šä¿¡æ—¶çš„æ¶ˆæ¯å¯¹è±¡
+ * ±íÊ¾·şÎñÆ÷ºÍ¿Í»§¶ËÍ¨ĞÅÊ±µÄÏûÏ¢¶ÔÏó
  */
 public class Message implements Serializable {
-    //å¢å¼ºå…¼å®¹æ€§
+    //ÔöÇ¿¼æÈİĞÔ
     private static final long serialVersionUID=1L;
-    private String sender;//å‘é€è€…
-    private String getter;//æ¥æ”¶è€…
-    private String content;//å‘é€å†…å®¹
-    private byte[] transfer;//ä¼ é€çš„å­—èŠ‚æ•°ç»„;
-    private Timestamp sendTime;//å‘é€æ—¶é—´
-    private String mesType;//æ¶ˆæ¯ç±»å‹{å¯ä»¥åœ¨æ¥å£ä¸­å®šä¹‰æ¶ˆæ¯ç±»å‹}
+    private String sender;//·¢ËÍÕß
+    private String getter;//½ÓÊÕÕß
+    private String content;//·¢ËÍÄÚÈİ
+    private byte[] transfer;//´«ËÍµÄ×Ö½ÚÊı×é;
+    private Timestamp sendTime;//·¢ËÍÊ±¼ä
+    private String mesType;//ÏûÏ¢ÀàĞÍ{¿ÉÒÔÔÚ½Ó¿ÚÖĞ¶¨ÒåÏûÏ¢ÀàĞÍ}
     private  String tempImage;
 
     public String getTempImage() {

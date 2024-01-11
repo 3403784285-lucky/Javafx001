@@ -16,36 +16,36 @@ import java.util.ResourceBundle;
 
 
 /**
- * @author å¼ åŸ¹çµ
- * @date 2024/01/09
- * å¸¸ç”¨è¯­ç¼–è¾‘æ§åˆ¶å™¨ç±»å‹
+ * @author ÕÅÅàÁé
+ *
+ * ³£ÓÃÓï±à¼­¿ØÖÆÆ÷ÀàĞÍ
  */
 public class alwaysController implements Initializable {
 
     /**
-     *å¸¸ç”¨è¯­æ˜¾ç¤º
+     *³£ÓÃÓïÏÔÊ¾
      */
     ArrayList<String>texts=new ArrayList<>();
     /**
-     *æ–‡æœ¬ç¼–è¾‘æ·»åŠ 
+     *ÎÄ±¾±à¼­Ìí¼Ó
      */
     @FXML
     private TextField text3;
 
     /**
-     *æ–‡æœ¬ç¼–è¾‘æ·»åŠ 
+     *ÎÄ±¾±à¼­Ìí¼Ó
      */
     @FXML
     private TextField text4;
 
     /**
-     *æ–‡æœ¬ç¼–è¾‘æ·»åŠ 
+     *ÎÄ±¾±à¼­Ìí¼Ó
      */
     @FXML
     private TextField text1;
 
     /**
-     *æ–‡æœ¬ç¼–è¾‘æ·»åŠ 
+     *ÎÄ±¾±à¼­Ìí¼Ó
      */
     @FXML
     private TextField text2;
@@ -59,7 +59,7 @@ public class alwaysController implements Initializable {
                 return null;
             }
         };
-        // è®¾ç½®ä»»åŠ¡å®Œæˆåçš„å›è°ƒï¼ˆåœ¨JavaFXçº¿ç¨‹ä¸­æ‰§è¡Œï¼‰
+        // ÉèÖÃÈÎÎñÍê³ÉºóµÄ»Øµ÷£¨ÔÚJavaFXÏß³ÌÖĞÖ´ĞĞ£©
         task.setOnSucceeded(e -> {
             ChatRoomController controller = ChatRoomView.getController();
             controller.setMi1(text1.getText());
@@ -68,7 +68,7 @@ public class alwaysController implements Initializable {
             controller.setMi4(text4.getText());
             alwaysView.alwaysStage.close();
         });
-        // åœ¨æ–°çº¿ç¨‹ä¸­æ‰§è¡Œä»»åŠ¡
+        // ÔÚĞÂÏß³ÌÖĞÖ´ĞĞÈÎÎñ
         Thread thread = new Thread(task);
         thread.start();
     }

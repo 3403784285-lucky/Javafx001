@@ -12,7 +12,7 @@ public class Friend implements Serializable {
     private String status;
     private String groupAccount;
     private boolean Online;
-    // 鏋勯�犲嚱鏁般�乬etter鍜宻etter鏂规硶
+    // 构造函数、getter和setter方法
 
 
     public boolean isOnline() {

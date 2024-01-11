@@ -6,9 +6,9 @@ import static org.junit.Assert.*;
 
 
 /**
- * @author å¼ åŸ¹çµ
- * @date 2024/01/09
- * æµ‹è¯•å‘é€é‚®ç®±
+ * @author ÕÅÅàÁé
+ *
+ * ²âÊÔ·¢ËÍÓÊÏä
  */
 public class PreEmailTest {
 

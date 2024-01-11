@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 public class ManageServerToThread {
     private static ConcurrentHashMap<String,ThreadServerConnect> hm=new ConcurrentHashMap();
-    //æ·»åŠ çº¿ç¨‹å¯¹è±¡åˆ°é›†åˆ
+    //Ìí¼ÓÏß³Ì¶ÔÏóµ½¼¯ºÏ
     public static void addServerThread(String account, ThreadServerConnect task)
     {
         hm.put(account,task);
@@ -20,7 +20,7 @@ public class ManageServerToThread {
     }
 
     public static boolean isExist(String account) {
-        System.out.println(hm+"æ˜¯å¦å­˜åœ¨è¡¨");
+        System.out.println(hm+"ÊÇ·ñ´æÔÚ±í");
         if(hm.containsKey(account))return true;
       return  false;
     }

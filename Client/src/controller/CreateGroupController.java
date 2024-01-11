@@ -22,7 +22,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-
+/**
+ * 创建群组界面的控制器，负责管理群组创建界面的各种交互操作和事件响应。
+ */
 public class CreateGroupController implements Initializable {
     @FXML
     private ListView<Friend> selectedFriend;
@@ -34,7 +36,12 @@ public class CreateGroupController implements Initializable {
     private TextField selectFriendGroup;
     @FXML
     private ListView<Friend> selectFriend;
-
+    /**
+     * 初始化方法，用于加载好友列表等操作。
+     *
+     * @param location  URL定位器
+     * @param resources 资源绑定器
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         //申请好友列表，将列表放入ListView
@@ -88,6 +95,12 @@ public class CreateGroupController implements Initializable {
         Thread initThread = new Thread(initTask);
         initThread.start();
     }
+    /**
+     * 搜索好友的方法。
+     *
+     * @param keyword         关键词
+     * @param friendsListView 好友列表视图
+     */
     private void searchFriends(String keyword, ListView<Friend> friendsListView) {
         ObservableList<Friend> searchResults = FXCollections.observableArrayList();
         for (Friend friend : allFriend) {
@@ -97,7 +110,11 @@ public class CreateGroupController implements Initializable {
         }
         friendsListView.setItems(searchResults);
     }
-
+    /**
+     * 取消创建群组操作。
+     *
+     * @param event 取消按钮点击事件
+     */
     @FXML
     void cancelCreate(ActionEvent event) {
         GroupCreateView.createGroupStage.close();
@@ -109,6 +126,11 @@ public class CreateGroupController implements Initializable {
         }
 
     }
+    /**
+     * 完成创建群组操作。
+     *
+     * @param event 创建按钮点击事件
+     */
     @FXML
     void defCreate(ActionEvent event) {
 

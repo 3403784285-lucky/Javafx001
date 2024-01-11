@@ -1,23 +1,69 @@
 package common;
 
 /**
- * æ¶ˆæ¯ç±»åž‹ï¼Œç”¨äºŽå±•ç¤ºå„ç§æ“ä½œçŠ¶æ€å’Œç»“æžœ
+ * ÏûÏ¢ÀàÐÍ£¬ÓÃÓÚÕ¹Ê¾¸÷ÖÖ²Ù×÷×´Ì¬ºÍ½á¹û
  */
 public interface MessageType {
-    String MESSAGE_LOGIN_SUCCEED="1";//è¡¨ç¤ºç™»é™†æˆåŠŸ
-    String MESSAGE_LOGIN_FAIL="2";//è¡¨ç¤ºç™»å½•å¤±è´¥
-    String MESSAGE_MODIFY_SUCCEED="3";//ä¿®æ”¹å¯†ç æˆåŠŸ
-    String MESSAGE_MODIFY_FAIL="4";//ä¿®æ”¹å¯†ç å¤±è´¥
-    String MESSAGE_REGISTER_SUCCEED="5";//æ³¨å†ŒæˆåŠŸ
-    String MESSAGE_REGISTER_FAIL="6";//æ³¨å†Œå¤±è´¥ï¼›
-    String MESSAGE_PROFILE_SUCCEED="7";//ä¿®æ”¹èµ„æ–™æˆåŠŸ
-    String MESSAGE_PROFILE_FAIL="8";//ä¿®æ”¹èµ„æ–™å¤±è´¥
+    /**
+     * ±íÊ¾µÇÂ¼³É¹¦µÄÏûÏ¢ÀàÐÍ¡£
+     */
+    String MESSAGE_LOGIN_SUCCEED="1";//±íÊ¾µÇÂ½³É¹¦
+    /**
+     * ±íÊ¾µÇÂ¼Ê§°ÜµÄÏûÏ¢ÀàÐÍ¡£
+     */
+    String MESSAGE_LOGIN_FAIL="2";//±íÊ¾µÇÂ¼Ê§°Ü
+    /**
+     * ±íÊ¾ÐÞ¸ÄÃÜÂë³É¹¦µÄÏûÏ¢ÀàÐÍ¡£
+     */
+    String MESSAGE_MODIFY_SUCCEED="3";//ÐÞ¸ÄÃÜÂë³É¹¦
+    /**
+     * ±íÊ¾ÐÞ¸ÄÃÜÂëÊ§°ÜµÄÏûÏ¢ÀàÐÍ¡£
+     */
+    String MESSAGE_MODIFY_FAIL="4";//ÐÞ¸ÄÃÜÂëÊ§°Ü
+    /**
+     * ±íÊ¾×¢²á³É¹¦µÄÏûÏ¢ÀàÐÍ¡£
+     */
+    String MESSAGE_REGISTER_SUCCEED="5";//×¢²á³É¹¦
+    /**
+     * ±íÊ¾×¢²áÊ§°ÜµÄÏûÏ¢ÀàÐÍ¡£
+     */
+    String MESSAGE_REGISTER_FAIL="6";//×¢²áÊ§°Ü£»
+    /**
+     * ±íÊ¾ÐÞ¸Ä×ÊÁÏ³É¹¦µÄÏûÏ¢ÀàÐÍ¡£
+     */
+    String MESSAGE_PROFILE_SUCCEED="7";//ÐÞ¸Ä×ÊÁÏ³É¹¦
+    /**
+     * ±íÊ¾ÐÞ¸Ä×ÊÁÏÊ§°ÜµÄÏûÏ¢ÀàÐÍ¡£
+     */
+    String MESSAGE_PROFILE_FAIL="8";//ÐÞ¸Ä×ÊÁÏÊ§°Ü
+    /**
+     * ±íÊ¾ËÑË÷³É¹¦µÄÏûÏ¢ÀàÐÍ¡£
+     */
     String MESSAGE_SEARCH_SUCCEED="9";
+    /**
+     * ±íÊ¾ËÑË÷Ê§°ÜµÄÏûÏ¢ÀàÐÍ¡£
+     */
     String MESSAGE_SEARCH_FAIL="10";
+    /**
+     * ±íÊ¾ºÃÓÑÉêÇë³É¹¦µÄÏûÏ¢ÀàÐÍ¡£
+     */
     String MESSAGE_APPLY_SUCCEED1="11";
+
+    /**
+     * ±íÊ¾ºÃÓÑÉêÇëÊ§°ÜµÄÏûÏ¢ÀàÐÍ¡£
+     */
     String MESSAGE_APPLY_FAIL1="12";
+    /**
+     * ±íÊ¾ºÃÓÑÉêÇëÏûÏ¢µÄÏûÏ¢ÀàÐÍ¡£
+     */
     String MESSAGE_FRIEND_APP="13";
+    /**
+     * ±íÊ¾ºÃÓÑ¹ØÏµÏûÏ¢µÄÏûÏ¢ÀàÐÍ¡£
+     */
     String MESSAGE_FRIEND_FRI="14";
+    /**
+     * ±íÊ¾Ä°ÉúÈË¹ØÏµÏûÏ¢µÄÏûÏ¢ÀàÐÍ¡£
+     */
     String MESSAGE_FRIEND_STRANGER="15";
 
 

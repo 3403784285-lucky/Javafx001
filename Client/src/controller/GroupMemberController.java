@@ -20,7 +20,9 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 import static controller.ProfileGroupController.setOr;
 import static controller.ProfileGroupController.transferOr;
-
+/**
+ * 群组成员管理界面的控制器，负责管理群组成员管理界面的各种交互操作和事件响应。
+ */
 public class GroupMemberController implements Initializable {
     @FXML
     private TextField quitmember;
@@ -32,7 +34,11 @@ public class GroupMemberController implements Initializable {
     private ListView<Friend> allMember;
     ObservableList<Friend> allMemberList;
     ObservableList<Friend> selectedMemberList;
-
+    /**
+     * 完成操作的方法，包括添加成员、设置管理员、转让群主和踢出成员。
+     *
+     * @param event 按钮点击事件
+     */
     @FXML
     void defineAction(ActionEvent event) {
         GroupMemberView.groupMemberStage.close();
@@ -89,6 +95,11 @@ public class GroupMemberController implements Initializable {
 
 
     }
+    /**
+     * 取消操作的方法。
+     *
+     * @param event 按钮点击事件
+     */
     @FXML
     void cancelAction(ActionEvent event) {
         GroupMemberView.groupMemberStage.close();
@@ -99,7 +110,12 @@ public class GroupMemberController implements Initializable {
             System.out.println("网络错误，界面打开失败");
         }
     }
-
+    /**
+     * 初始化方法，用于加载群组成员列表等操作。
+     *
+     * @param location  URL定位器
+     * @param resources 资源绑定器
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Task<Void> initializationTask = new Task<Void>() {

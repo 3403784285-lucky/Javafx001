@@ -4,54 +4,54 @@ import java.io.Serializable;
 import java.sql.Date;
 
 /**
- * è¡¨ç¤ºä¸€ä¸ªç”¨æˆ·ä¿¡æ¯ï¼Œä¹Ÿæ˜¯ä¸ºäº†åŒºåˆ«å„ç§å†²çªç±»å‹çš„è§£å†³æ–¹æ³•
+ * ±íÊ¾Ò»¸öÓÃ»§ĞÅÏ¢£¬Ò²ÊÇÎªÁËÇø±ğ¸÷ÖÖ³åÍ»ÀàĞÍµÄ½â¾ö·½·¨
  */
 public class UserCopy implements Serializable {
     /**
-     *ç”¨äºåºåˆ—åŒ–çš„ç‰ˆæœ¬
+     *ÓÃÓÚĞòÁĞ»¯µÄ°æ±¾
      */
-    //å¢å¼ºå…¼å®¹æ€§
+    //ÔöÇ¿¼æÈİĞÔ
     private static final long serialVersionUID=1L;
     /**
-     *ç”¨æˆ·è´¦å·
-     *///ç”¨æˆ·ID
+     *ÓÃ»§ÕËºÅ
+     *///ÓÃ»§ID
     private String userAccount;
 
     /**
-     *ç”¨æˆ·æ˜¯å¦åœ¨çº¿
+     *ÓÃ»§ÊÇ·ñÔÚÏß
      */
     private boolean Online;
     /**
-     *ç”¨æˆ·å¯†ç 
-     *///å¯†ç 
+     *ÓÃ»§ÃÜÂë
+     *///ÃÜÂë
     private String password;
     /**
-     *ç”¨æˆ·é‚®ç®±
-     *///é‚®ç®±
+     *ÓÃ»§ÓÊÏä
+     *///ÓÊÏä
     private String userEmail;
 
     /**
-     *ç”¨æˆ·å¤´åƒ
+     *ÓÃ»§Í·Ïñ
      */
     private  String userImage;
 
     /**
-     *ç”¨æˆ·ç”Ÿæ—¥
+     *ÓÃ»§ÉúÈÕ
      */
     private Date userBirthday;
 
     /**
-     *ç”¨æˆ·ç­¾å
+     *ÓÃ»§Ç©Ãû
      */
     private String userSignature;
 
     /**
-     *ç”¨æˆ·åç§°
+     *ÓÃ»§Ãû³Æ
      */
     private String userName;
 
     /**
-     *ç”¨æˆ·æ€§åˆ«
+     *ÓÃ»§ĞÔ±ğ
      */
     private String gender;
 

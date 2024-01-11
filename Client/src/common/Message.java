@@ -4,17 +4,43 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 /**
- * è¡¨ç¤ºæœåŠ¡å™¨å’Œå®¢æˆ·ç«¯é€šä¿¡æ—¶çš„æ¶ˆæ¯å¯¹è±¡
+ * ±íÊ¾·şÎñÆ÷ºÍ¿Í»§¶ËÍ¨ĞÅÊ±µÄÏûÏ¢¶ÔÏó
+ *
+ * @author ÕÅÅàÁé
+
  */
 public class Message implements Serializable {
-    //å¢å¼ºå…¼å®¹æ€§
+    /**
+     *ÔöÇ¿¼æÈİĞÔ
+     */
     private static final long serialVersionUID=1L;
-    private String sender;//å‘é€è€…
-    private String getter;//æ¥æ”¶è€…
-    private String content;//å‘é€å†…å®¹
-    private byte[] transfer;//ä¼ é€çš„å­—èŠ‚æ•°ç»„;
-    private Timestamp sendTime;//å‘é€æ—¶é—´
-    private String mesType;//æ¶ˆæ¯ç±»å‹{å¯ä»¥åœ¨æ¥å£ä¸­å®šä¹‰æ¶ˆæ¯ç±»å‹}
+    /**
+     *·¢ËÍÕß
+     */
+    private String sender;
+    /**
+     *½ÓÊÕÕß
+     */
+    private String getter;
+    /**
+     *·¢ËÍÄÚÈİ
+     */
+    private String content;
+    /**
+     *´«ËÍµÄ×Ö½ÚÊı×é;
+     */
+    private byte[] transfer;
+    /**
+     *·¢ËÍÊ±¼ä
+     */
+    private Timestamp sendTime;
+    /**
+     *ÏûÏ¢ÀàĞÍ{¿ÉÒÔÔÚ½Ó¿ÚÖĞ¶¨ÒåÏûÏ¢ÀàĞÍ}
+     */
+    private String mesType;
+    /**
+     *ÁÙÊ±´¢´æÍ¼Æ¬Â·¾¶µÄ
+     */
     private  String tempImage;
 
     public String getTempImage() {
