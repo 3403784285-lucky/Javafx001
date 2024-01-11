@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CreateGroupController">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="600.0" opacity="0.3" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../backphoto/back16.jpg" />
+         </image>
+      </ImageView>
+      <ListView fx:id="selectedFriend" layoutX="335.0" prefHeight="400.0" prefWidth="265.0" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+      <ListView fx:id="selectFriend" layoutX="51.0" layoutY="144.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="50.0" />
+      <TextField fx:id="selectFriendGroup" layoutX="12.0" layoutY="1.0" promptText="搜索关键词" />
+      <Text layoutX="358.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="已选好友" wrappingWidth="209.0" />
+      <TextField fx:id="groupName" layoutX="278.0" layoutY="426.0" promptText="输入你想创建的群聊名称" />
+      <Button layoutX="425.0" layoutY="483.0" mnemonicParsing="false" onAction="#cancelCreate" text="取消" />
+      <Button layoutX="285.0" layoutY="484.0" mnemonicParsing="false" onAction="#defCreate" text="确认" />
+   </children>
+</AnchorPane>

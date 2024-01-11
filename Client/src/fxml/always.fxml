@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.alwaysController">
+   <children>
+      <TextField fx:id="text1" layoutX="10.0" layoutY="37.0" prefHeight="37.0" prefWidth="178.0" />
+      <TextField fx:id="text2" layoutX="11.0" layoutY="84.0" prefHeight="37.0" prefWidth="178.0" />
+      <TextField fx:id="text3" layoutX="11.0" layoutY="132.0" prefHeight="37.0" prefWidth="178.0" />
+      <TextField fx:id="text4" layoutX="10.0" layoutY="180.0" prefHeight="37.0" prefWidth="178.0" />
+      <Button layoutX="73.0" layoutY="253.0" mnemonicParsing="false" onAction="#modifyButton" text="修改">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

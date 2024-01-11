@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <ImageView fitHeight="300.0" fitWidth="410.0" layoutX="-7.0">
+         <image>
+            <Image url="@../backphoto/back3.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="login" layoutX="138.0" layoutY="198.0" mnemonicParsing="false" onAction="#loginEnter" style="-fx-background-color: #B0D5DC;" text="登录" textFill="#6c8c8b">
+         <effect>
+            <ColorAdjust hue="0.03" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="register" layoutX="247.0" layoutY="197.0" mnemonicParsing="false" onAction="#registerEnter" style="-fx-background-color: #B0D5DC;" text="注册" textFill="#5fa0b2">
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Text fx:id="account" layoutX="93.0" layoutY="121.0" opacity="0.52" strokeType="OUTSIDE" strokeWidth="0.0" text="账号" wrappingWidth="55.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#61a0b2" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Text>
+      <Text fx:id="password" layoutX="44.0" layoutY="166.0" opacity="0.52" strokeType="OUTSIDE" strokeWidth="0.0" text="密码/验证码">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#8abdc3" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Text>
+      <TextField fx:id="textAccount" layoutX="135.0" layoutY="105.0" onAction="#accountAction" onKeyReleased="#accountReleased" opacity="0.73" promptText="输入邮箱或者账号">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <PasswordField fx:id="textPassword" layoutX="136.0" layoutY="150.0" onAction="#passwordAction" onKeyReleased="#passwordReleased" promptText="输入密码或验证码">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></PasswordField>
+      <Text fx:id="forgetPassword" layoutX="312.0" layoutY="280.0" onMouseClicked="#forgetPasswordAction" opacity="0.43" strokeType="OUTSIDE" strokeWidth="0.0" text="忘记/找回密码" underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Text>
+      <Button fx:id="identifyingcode" disable="true" layoutX="320.0" layoutY="105.0" mnemonicParsing="false" onAction="#identifyingAction" prefHeight="24.0" prefWidth="48.0" style="-fx-background-color: #A0CEE5;" text="发送验证码">
+         <font>
+            <Font size="6.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TextField fx:id="hideText" layoutX="136.0" layoutY="150.0" promptText="输入密码或验证码" visible="false" />
+      <ImageView fx:id="convert1" fitHeight="30.0" fitWidth="24.0" layoutX="269.0" layoutY="150.0" onMouseClicked="#convert1Action" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../backphoto/back7.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="convert2" fitHeight="30.0" fitWidth="24.0" layoutX="269.0" layoutY="149.0" onMouseClicked="#convert2Action" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../backphoto/back6.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Button layoutY="276.0" mnemonicParsing="false" onAction="#quitAction" opacity="0.68" prefHeight="24.0" prefWidth="48.0" style="-fx-background-color: #ADDCE6;" text="退出">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

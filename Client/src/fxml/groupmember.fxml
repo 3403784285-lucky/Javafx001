@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GroupMemberController">
+   <children>
+      <TextField fx:id="quitmember" layoutX="14.0" layoutY="14.0" prefHeight="48.0" prefWidth="260.0" promptText="搜索你要踢出的成员" />
+      <ListView fx:id="selectedMember" layoutX="336.0" layoutY="73.0" prefHeight="200.0" prefWidth="253.0" />
+      <Text layoutX="342.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="已选择的" />
+      <Button layoutX="335.0" layoutY="283.0" mnemonicParsing="false" onAction="#defineAction" prefHeight="48.0" prefWidth="66.0" text="确认">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="438.0" layoutY="282.0" mnemonicParsing="false" onAction="#cancelAction" prefHeight="48.0" prefWidth="66.0" text="取消">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <ListView fx:id="allMember" layoutX="16.0" layoutY="73.0" prefHeight="208.0" prefWidth="253.0" />
+   </children>
+</AnchorPane>

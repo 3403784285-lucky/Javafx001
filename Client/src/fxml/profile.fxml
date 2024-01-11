@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProfileController">
+   <children>
+      <ImageView fx:id="image" fitHeight="210.0" fitWidth="268.0" layoutX="4.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+      <Text layoutX="300.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="昵称" />
+      <Text layoutX="300.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="生日" />
+      <Text layoutX="300.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="年龄" />
+      <Text layoutX="300.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="账号" />
+      <Text layoutX="300.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="性别" />
+      <Text fx:id="age" layoutX="372.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="300.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="个性签名" />
+      <Text fx:id="birthday" layoutX="372.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="account" layoutX="372.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="name" layoutX="372.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="gender" layoutX="372.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <TextArea fx:id="signature" disable="true" layoutX="272.0" layoutY="282.0" prefHeight="200.0" prefWidth="319.0" />
+      <Text layoutX="300.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="状态" />
+      <Text fx:id="onlineStatus" layoutX="374.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Button fx:id="addgf" disable="true" layoutX="58.0" layoutY="278.0" mnemonicParsing="false" onAction="#application" text="添加" visible="false">
+         <tooltip>
+            <Tooltip text="这里如果添加不了就有两种情况：此人是您自己，或者您已经添加过了他呢" />
+         </tooltip></Button>
+      <Button fx:id="approval" disable="true" layoutX="58.0" layoutY="326.0" mnemonicParsing="false" onAction="#approvalAction" text="同意" visible="false" />
+      <Button fx:id="delete" disable="true" layoutX="40.0" layoutY="422.0" mnemonicParsing="false" onAction="#deleteAction" text="删除好友" visible="false" />
+      <Button fx:id="back" layoutY="558.0" mnemonicParsing="false" onAction="#backAction" prefHeight="32.0" prefWidth="48.0" text="返回">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Button>
+      <Text fx:id="group" layoutX="278.0" layoutY="522.0" strokeType="OUTSIDE" strokeWidth="0.0" visible="false" wrappingWidth="300.0" />
+      <Button fx:id="approvalGroup" disable="true" layoutX="284.0" layoutY="528.0" mnemonicParsing="false" onAction="#approvalGroupAction" prefHeight="32.0" prefWidth="80.0" text="同意加入" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="refuse" disable="true" layoutX="152.0" layoutY="326.0" mnemonicParsing="false" onAction="#refuseAction" text="拒绝" visible="false" />
+      <Button fx:id="refuseGroup" disable="true" layoutX="382.0" layoutY="528.0" mnemonicParsing="false" onAction="#refuseGroupAction" text="拒绝加入" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

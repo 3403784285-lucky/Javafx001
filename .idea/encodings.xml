@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Client/src/controller/ChatRecordController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/controller/ChatRoomController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/controller/CreateGroupController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/controller/GroupMemberController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/controller/LoginController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/controller/ModifyProFileController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/controller/ProfileController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/controller/ProfileGroupController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/controller/RegisterController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/request/MessageClientService.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/request/UserClientService.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/utils/Emoji.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/utils/EmojiUtils.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/utils/FriendListCell.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/utils/FriendListCellMulti.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/utils/FriendListCellMultiS.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/utils/Main.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/utils/ManageClientToThread.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/utils/Md5Code.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/utils/PreEmail.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/utils/RegexEmail.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/utils/Request.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/utils/SnowFlakeId.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/utils/TempStore.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/utils/ThreadClientConnect.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/utils/UUID.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/utils/UtilException.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/view/ChatRecordView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/view/ChatRoomView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/view/GroupCreateView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/view/GroupMemberView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/view/GroupProfileView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/view/LoginView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/view/ModifyView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/view/ProFileView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/view/RegisterView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Server/src/company/Channel.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Server/src/company/ConnectSql.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Server/src/company/ConnectSqlMessage.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Server/src/company/Server.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Server/src/loare/DealWithModify.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Server/src/loare/DealWithProFile.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Server/src/loare/DealWithRegister.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Server/src/loare/LoginImageDeal.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Server/src/utils/GetMyAccount.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Server/src/utils/SnowFlakeId.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Server/src/utils/ThreadServerConnect.java" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

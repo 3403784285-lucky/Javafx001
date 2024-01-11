@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProfileGroupController">
+   <children>
+      <ImageView fx:id="imageGroup" fitHeight="150.0" fitWidth="200.0" layoutX="3.0" layoutY="3.0" onMouseClicked="#imageChange" pickOnBounds="true" preserveRatio="true" />
+      <Text layoutX="278.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="群聊账号" />
+      <TextField fx:id="groupAccount" layoutX="278.0" layoutY="65.0" />
+      <Text layoutX="278.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="群名称" />
+      <TextField fx:id="groupName" layoutX="278.0" layoutY="128.0" />
+      <Text layoutX="278.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="群简介" />
+      <TextArea fx:id="groupSignature" layoutX="274.0" layoutY="200.0" prefHeight="200.0" prefWidth="322.0" />
+      <Button fx:id="applyGroup" layoutX="14.0" layoutY="189.0" mnemonicParsing="false" onAction="#applyGroupAction" prefHeight="34.0" prefWidth="96.0" text="加入群聊">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="addMember" disable="true" layoutX="13.0" layoutY="222.0" mnemonicParsing="false" onAction="#addMemberAction" text="添加成员" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="substractMember" disable="true" layoutX="14.0" layoutY="258.0" mnemonicParsing="false" onAction="#substractMemberAction" prefHeight="35.0" prefWidth="96.0" text="踢除成员" visible="false">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="leaveGroup" layoutX="14.0" layoutY="293.0" mnemonicParsing="false" onAction="#leaveGroupAction" prefHeight="36.0" prefWidth="96.0" text="退出群聊">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="quitGroup" disable="true" layoutX="14.0" layoutY="329.0" mnemonicParsing="false" onAction="#quitGroupAction" text="解散群聊" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="-2.0" layoutY="371.0" mnemonicParsing="false" onAction="#backAction" text="返回">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="setManager" disable="true" layoutX="14.0" layoutY="189.0" mnemonicParsing="false" onAction="#setManagerAction" prefHeight="34.0" prefWidth="96.0" text="设置管理员" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="transferGroup" layoutX="16.0" layoutY="155.0" mnemonicParsing="false" onAction="#transferGroupAction" prefHeight="34.0" prefWidth="96.0" text="转让群主">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

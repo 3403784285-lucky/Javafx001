@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane opacity="0.87" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyProFileController">
+   <children>
+      <TextField fx:id="signature" layoutX="133.0" layoutY="207.0" promptText="请输入你想要个性签名" />
+      <TextField fx:id="username" layoutX="131.0" layoutY="111.0" promptText="请输入你想要的用户名" />
+      <TextField fx:id="account" editable="false" layoutX="133.0" layoutY="255.0" />
+      <Text layoutX="90.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="生日" />
+      <Text layoutX="84.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="用户名" />
+      <Text layoutX="74.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="个性签名" />
+      <Text layoutX="90.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="账号" />
+      <Text layoutX="93.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="性别" />
+      <Button fx:id="saveInformation" layoutX="184.0" layoutY="354.0" mnemonicParsing="false" onAction="#saveInformation" style="-fx-background-color: #D9E8F3;" text="保存" textFill="#000000d9">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <DatePicker fx:id="birthday" layoutX="134.0" layoutY="159.0" promptText="请输入你想要的日期" />
+      <ImageView fx:id="userImage" fitHeight="83.0" fitWidth="89.0" layoutX="170.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+      <Text layoutX="90.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="头像" />
+      <Button fx:id="chooseImage" layoutX="292.0" layoutY="63.0" mnemonicParsing="false" onAction="#favorImage" prefHeight="30.0" prefWidth="60.0" text="选择头像">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <TextField fx:id="gender" layoutX="131.0" layoutY="301.0" />
+   </children>
+</AnchorPane>

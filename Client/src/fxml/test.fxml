@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utils.Test">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="356.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView layoutX="-28.0" layoutY="58.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="C1" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ToggleButton layoutX="339.0" layoutY="214.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="0.0" text="ToggleButton">
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </ToggleButton>
+                  <PasswordField layoutX="67.0" layoutY="214.0" />
+                  <ImageView fitHeight="40.0" fitWidth="48.0" layoutX="349.0" layoutY="218.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Pictures/Camera%20Roll/20200905001200517.png" />
+                     </image>
+                  </ImageView>
+                  <TextField layoutX="67.0" layoutY="210.0" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+      <Label layoutX="298.0" layoutY="29.0" text="登录">
+         <font>
+            <Font size="59.0" />
+         </font>
+      </Label>
+      <Label layoutX="186.0" layoutY="148.0" text="账号" />
+      <Label layoutX="186.0" layoutY="222.0" text="密码" />
+      <Button layoutX="255.0" layoutY="302.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="473.0" layoutY="308.0" mnemonicParsing="false" text="Button" />
+   </children>
+</AnchorPane>

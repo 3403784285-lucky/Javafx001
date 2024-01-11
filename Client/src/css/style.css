@@ -1,0 +1,12 @@
+.tab-pane > .tab-header-area {
+    -fx-rotate: 90;
+}
+
+.tab-pane > .tab-header-area .tab {
+    -fx-rotate: -90;
+}
+
+.tab-pane > .tab-header-area .tab .tab-label {
+    -fx-rotate: 90;
+    -fx-translate-x: 0px; // 调整标签的位置
+}

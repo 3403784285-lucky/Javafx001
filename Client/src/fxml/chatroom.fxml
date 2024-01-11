@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ChatRoomController">
+   <children>
+      <VBox prefHeight="607.0" prefWidth="98.0" style="-fx-background-color: #071E3C;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="700.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="userImage" fitHeight="93.0" fitWidth="99.0" onMouseClicked="#imageClicked" pickOnBounds="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Button fx:id="message" mnemonicParsing="false" onAction="#messageAction" prefHeight="76.0" prefWidth="91.0" style="-fx-background-color: #071E3C;">
+               <graphic>
+                  <ImageView fx:id="haha" fitHeight="69.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@../backphoto/back10.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="contact" mnemonicParsing="false" onAction="#contactAction" prefHeight="79.0" prefWidth="100.0" style="-fx-background-color: #071E3C;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fx:id="guagua" fitHeight="62.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../backphoto/back11.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="logout" mnemonicParsing="false" onAction="#logoutAction" prefHeight="83.0" prefWidth="99.0" style="-fx-background-color: #071E3C;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="70.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" fx:id="xixi">
+                     <image>
+                        <Image url="@../backphoto/back12.jpg" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <VBox fx:id="messagePane" layoutY="-6.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TabPane prefHeight="600.0" prefWidth="250.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="friendfriend" text="好友">
+                     <content>
+                        <ListView fx:id="friendList" prefHeight="480.0" prefWidth="224.0" />
+                     </content>
+                </Tab>
+                <Tab fx:id="groupgroup" text="群聊">
+                     <content>
+                        <ListView fx:id="groupListView" prefHeight="200.0" prefWidth="200.0" />
+                     </content>
+                </Tab>
+                  <Tab fx:id="otherother" text="其他">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="542.0" prefWidth="165.0">
+                           <children>
+                              <TextField fx:id="searchFriend" layoutX="14.0" layoutY="14.0" prefHeight="31.0" prefWidth="150.0" promptText="请输入好友或群聊账号">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="searchF" layoutX="179.0" layoutY="15.0" mnemonicParsing="false" onAction="#clickedF" opacity="0.45" prefHeight="29.0" prefWidth="28.0" style="-fx-background-color: #FFFFFF;">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="14.0" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../backphoto/back8.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <ListView fx:id="friendListView" layoutY="67.0" prefHeight="477.0" prefWidth="250.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="67.0" />
+                              <Button layoutX="216.0" layoutY="17.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="22.0" style="-fx-background-color: #FFFFFF;">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../backphoto/back9.jpg" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <contextMenu>
+                                    <ContextMenu>
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#creatGroup" text="新建群聊" />
+                                          <MenuItem fx:id="changePassword" mnemonicParsing="false" onAction="#changePasswordAction" text="修改密码" />
+                                      </items>
+                                    </ContextMenu>
+                                 </contextMenu>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </VBox>
+      <ScrollPane fx:id="scrollPane" layoutX="350.0" prefHeight="400.0" prefWidth="450.0" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <FlowPane fx:id="flowPane1" prefHeight="400.0" prefWidth="446.0" style="-fx-background-color: #FFFFFF;" />
+         </content>
+      </ScrollPane>
+      <TextArea fx:id="messagess" layoutX="386.0" layoutY="448.0" onKeyReleased="#messageSend" prefHeight="159.0" prefWidth="450.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="450.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextArea>
+      <Button fx:id="sendButton" layoutX="720.0" layoutY="545.0" mnemonicParsing="false" onAction="#sendButtonAction" text="发送" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="714.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="552.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="707.0" layoutY="408.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="54.0" style="-fx-background-color: #FFFFFF;">
+         <font>
+            <Font size="9.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../backphoto/back22.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem fx:id="profileIdGroup" mnemonicParsing="false" onAction="#profileActionGroup" text="查看群资料" />
+                  <MenuItem fx:id="profileId" mnemonicParsing="false" onAction="#profileAction" text="查看好友资料" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </Button>
+      <Button layoutX="645.0" layoutY="407.0" mnemonicParsing="false" onAction="#chatHistory" prefHeight="35.0" prefWidth="63.0" style="-fx-background-color: #FFFFFF;">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../backphoto/back23.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="384.0" layoutY="407.0" mnemonicParsing="false" onAction="#expression" prefHeight="34.0" prefWidth="48.0" style="-fx-background-color: #FFFFFF;">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../backphoto/back14.png" />
+               </image></ImageView>
+         </graphic>
+         <font>
+            <Font size="3.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="docuSend" layoutX="436.0" layoutY="407.0" mnemonicParsing="false" onAction="#fileSend" prefHeight="41.0" prefWidth="57.0" style="-fx-background-color: #FFFFFF;">
+         <font>
+            <Font size="8.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../backphoto/back13.jpg" />
+               </image></ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="photoSend" layoutX="587.0" layoutY="408.0" mnemonicParsing="false" onAction="#imageChoose" prefHeight="41.0" prefWidth="63.0" style="-fx-background-color: #FFFFFF;">
+         <font>
+            <Font size="6.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="37.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../backphoto/back15.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <MenuButton fx:id="always" layoutX="493.0" layoutY="407.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="98.0" style="-fx-background-color: #FFFFFF;" text="常用语">
+        <items>
+            <MenuItem fx:id="mi1" mnemonicParsing="false" onAction="#menuItem1" text="怎么了" />
+          <MenuItem fx:id="mi2" mnemonicParsing="false" onAction="#menuItem2" text="笑死" />
+          <MenuItem fx:id="mi3" mnemonicParsing="false" onAction="#menuItem3" text="晚安" />
+            <MenuItem fx:id="mi4" mnemonicParsing="false" onAction="#menuItem4" text="你好" />
+        </items>
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#changeAlways" text="修改" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </MenuButton>
+      <ScrollPane fx:id="emojiscroll" layoutX="448.0" layoutY="328.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="79.0" AnchorPane.leftAnchor="448.0" AnchorPane.rightAnchor="152.0" AnchorPane.topAnchor="328.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <content>
+            <FlowPane fx:id="emojiflow" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </FlowPane>
+         </content>
+      </ScrollPane>
+      <VBox fx:id="contactpane" disable="true" prefHeight="600.0" prefWidth="250.0" style="-fx-background-color: #F4F4F4;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ListView fx:id="applicationaa" prefHeight="625.0" prefWidth="250.0" />
+         </children>
+      </VBox>
+      <AnchorPane fx:id="hidePane" layoutX="499.0" layoutY="328.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="450.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../backphoto/back17.png" />
+               </image></ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterController">
+   <children>
+      <ImageView fitHeight="300.0" fitWidth="400.0" pickOnBounds="true">
+         <image>
+            <Image url="@../backphoto/back4.jpg" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <TextField fx:id="email1" layoutX="110.0" layoutY="74.0" opacity="0.6" promptText="请输入你的邮箱" text="\@qq.com">
+         <tooltip>
+            <Tooltip text="要填写完正确的邮箱才可以有验证码哦" />
+         </tooltip></TextField>
+      <PasswordField fx:id="password1" layoutX="109.0" layoutY="113.0" onKeyReleased="#OnKeyReleased" opacity="0.76" promptText="请输入你想创建的密码">
+         <tooltip>
+            <Tooltip text="密码最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符" />
+         </tooltip></PasswordField>
+      <PasswordField fx:id="confirmPassword1" editable="false" layoutX="110.0" layoutY="150.0" onKeyReleased="#OnKeyPswdCom" opacity="0.75" promptText="请再次确认密码">
+         <tooltip>
+            <Tooltip text="只有输入了正确格式的密码才可以再次输入确认密码哦" />
+         </tooltip></PasswordField>
+      <Text fx:id="hello" layoutX="118.0" layoutY="50.0" opacity="0.65" strokeType="OUTSIDE" strokeWidth="0.0" text="你好，新用户">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#244861" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <Button fx:id="registerButton" disable="true" layoutX="172.0" layoutY="222.0" mnemonicParsing="false" onAction="#Register" style="-fx-background-color: #CCE4FE;" text="注册">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <tooltip>
+            <Tooltip text="如果我还没出来说明小主您的两次密码不一致或者验证码输入错误哦" />
+         </tooltip></Button>
+      <Button fx:id="button1" layoutX="299.0" layoutY="73.0" mnemonicParsing="false" onAction="#getButton1" style="-fx-background-color: #CCE4FE;" text="发送验证码">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <tooltip>
+            <Tooltip text="只有输入正确格式的邮件才可以发送验证码哦" />
+         </tooltip>
+      </Button>
+      <TextField fx:id="verificationCode1" layoutX="109.0" layoutY="186.0" onKeyReleased="#ConfirmReleased" promptText="请输入验证码" />
+      <ImageView fx:id="reddot" fitHeight="9.0" fitWidth="11.0" layoutX="276.0" layoutY="119.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@../backphoto/back5.png" />
+         </image></ImageView>
+      <Button fx:id="modify" disable="true" layoutX="172.0" layoutY="222.0" mnemonicParsing="false" onAction="#modifyAction" opacity="0.74" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: #F8E2FF;" text="修改">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="return1" mnemonicParsing="false" onAction="#return1Action" prefHeight="23.0" prefWidth="29.0" style="-fx-background-color: #C1CEFB;" text="返回">
+         <font>
+            <Font size="8.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="hideText" layoutX="109.0" layoutY="113.0" onKeyReleased="#hideReleased" promptText="请输入您想创建的密码" />
+      <ImageView fx:id="convert1" fitHeight="23.0" fitWidth="20.0" layoutX="247.0" layoutY="115.0" onMouseClicked="#convert1Action" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../backphoto/back7.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="convert2" fitHeight="23.0" fitWidth="20.0" layoutX="247.0" layoutY="115.0" onMouseClicked="#convert2Action" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../backphoto/back6.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ImageView>
+   </children>
+</AnchorPane>
